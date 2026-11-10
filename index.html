@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>AI HUB — Ultimate AI Workspace</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<header class="topbar">
+  <a class="brand" href="#">AI<span>HUB</span><small> FINAL</small></a>
+  <button id="themeBtn" class="theme-btn">🌙</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="badge">✦ ULTIMATE AI WORKSPACE</div>
+  <h1>One Hub.<br><span>Infinite AI.</span></h1>
+  <p>Discover, explore and launch your favorite AI tools.</p>
+  <button class="primary-btn" onclick="exploreTools()">Explore AI Tools ↗</button>
+</section>
+
+<section class="dashboard">
+  <div class="stats-grid">
+    <div class="stat-card"><span>AI TOOLS</span><h2 id="totalTools">0</h2></div>
+    <div class="stat-card"><span>FAVORITES</span><h2 id="totalFav">0</h2></div>
+  </div>
+  <div class="featured-card">
+    <div class="featured-label">✦ TOOL OF THE DAY</div>
+    <div id="dailyTool"></div>
+  </div>
+  <div class="section-title"><h2>Recently Used</h2><p>Your quick launch history</p></div>
+  <div id="recentTools" class="mini-grid"></div>
+  <div class="section-title"><h2>Trending AI</h2><p>Popular AI tools to explore</p></div>
+  <div id="trendingTools" class="mini-grid"></div>
+</section>
+
+<section class="quick-launch">
+  <h2>⚡ Quick AI Launcher</h2>
+  <p>Find your AI and launch instantly.</p>
+  <input id="quickSearch" placeholder="Search ChatGPT, Gemini, Suno..." oninput="quickSearchAI()">
+  <div id="quickResults"></div>
+</section>
+
+<section class="compare-section">
+  <h2>⚖️ AI Compare</h2>
+  <p>Compare two AI tools side-by-side.</p>
+  <div class="compare-selects">
+    <select id="compareA"></select>
+    <select id="compareB"></select>
+  </div>
+  <button class="primary-btn" onclick="compareAI()">Compare AI ↗</button>
+  <div id="compareResult"></div>
+</section>
+
+<section class="finder">
+  <div class="section-title"><h2>Smart AI Finder</h2><p>What do you want to do today?</p></div>
+  <div class="finder-box">
+    <input id="finderInput" placeholder="e.g. Make a video, study Maths...">
+    <button onclick="findAI()">Find AI ✦</button>
+  </div>
+  <div id="finderResults"></div>
+</section>
+
+<section class="tools-section" id="toolsSection">
+  <div class="section-title"><h2>Explore AI Tools</h2><p>All your favorite AI tools in one place.</p></div>
+  <input id="searchInput" placeholder="🔍 Search AI tools..." oninput="render()">
+  <div id="categoryTabs"></div>
+  <div id="toolGrid" class="tool-grid"></div>
+</section>
+
+<section class="details-section">
+  <h2>AI Tool Details</h2>
+  <p>Tap any tool card to explore its details.</p>
+  <div id="toolDetails"></div>
+</section>
+
+<section class="custom-section">
+  <h2>Custom AI Tools</h2>
+  <p>Add your own favorite AI website.</p>
+  <button onclick="openAddTool()">＋ Add AI Tool</button>
+</section>
+</main>
+
+<footer>
+  <h3>AI HUB FINAL</h3>
+  <p>Your ultimate AI workspace.</p>
+  <p>Made with ♥ Shivang</p>
+</footer>
+
+<nav class="bottom-nav">
+  <button onclick="exploreTools()">🏠<span>Home</span></button>
+  <button onclick="setCategory('Favorites')">⭐<span>Favorites</span></button>
+  <button onclick="document.querySelector('.finder').scrollIntoView({behavior:'smooth'})">✨<span>Finder</span></button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
